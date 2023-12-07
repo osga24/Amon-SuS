@@ -1,0 +1,81 @@
+/* 動畫 */
+
+
+/* 整體動畫 全部設定歸零 */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* 整體背景顏色 */
+    background-color: black;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    min-height: 400px;
+    
+    margin-top: 250px;
+
+}
+/* 按鈕 */
+.btn{
+    /* 按鈕大小 */
+    width: 300px;
+    height: 100px;
+    border: none;
+    /* 字體顏色 */
+    color: 	#9F35FF;
+    /* 背景顏色 */
+    background-color:#FFA6FF;
+    /* 字體大小 */
+    font-size: 30px;
+    /* 圓弧 */
+    border-radius: 50px;
+    
+    transition: 0.5s ease-in;
+    position: relative;
+    z-index: 1
+}
+/* 動畫 */
+/* 
+.btn:hover{
+    box-shadow: inset 300px 0px 0px 0px lightcoral;
+    color:pink;
+    cursor: pointer;
+}
+
+
+*/
+
+
+/* 動畫2 往中間 */
+
+.btn:hover{
+    color: #9F35FF;
+    cursor: pointer
+}
+.btn::before{
+    background-color: lightblue;
+    content: "";
+    position:absolute;
+    top:0;
+    left:50%;
+    right: 50%;
+    bottom:0;
+    transform: 0.5s all ease;
+
+}
+
+.btn:hover::before{
+    transition: 0.5s all ease;
+    left:0%;
+    right:0%;
+    z-index: -1;
+    border-radius: 50px;
+}
